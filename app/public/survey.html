@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="fa fa-facebook-square"></span> Survey</h1>
+      <hr>
+      <h2 class="text-center">About You:</h2>
+    </div>
+
+    <!-- Survey -->
+    <div class="container">
+        
+        <h4>Name (Required)</h4>
+        <input type="text" id="name" class="form-control" required="">
+        <h4>Link to Photo Image (Required)</h4>
+        <input type="text" id="photo" class="form-control" required="">
+        <hr>
+
+        <!-- Questions -->
+        <h3><strong>Question 1</strong></h3>
+        <h4>I see myself as extroverted, enthusiastic.</h4>
+        <select data-placeholder="" class="browser-default" id="question1">
+            <option value="">Choose an option</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            Submit
+        </button>
+    </div>
+
+      
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/nlee728/friend-finder">Github Repository</a>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body>
+</html>
