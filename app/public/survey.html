@@ -44,13 +44,33 @@
         </select>
     </div>
 
-    <!-- Submit Button -->
+    <!-- Submit Button  trigger modal-->
     <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"  data-toggle="modal" data-target="#exampleModalCenter">
             <i class="fa fa-check-circle" aria-hidden="true"></i>
             Submit
         </button>
     </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Best Match!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
       
     <!-- Footer -->
@@ -61,6 +81,44 @@
     </footer>
 
   </div>
+
+  <script type="text/javascript">
+    // Submit button on-click handler
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        // Store responses to a variable  
+        var user = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+                $("#question1").val(),
+                $("#question2").val(),
+                $("#question3").val(),
+                $("#question4").val(),
+                $("#question5").val(),
+                $("#question6").val(),
+                $("#question7").val(),
+                $("#question8").val(),
+                $("#question9").val(),
+                $("#question10").val()
+            ]
+        };
+        console.log(user);
+
+        $.post("/api/friends", user, function (data) {
+
+            //Get the information for the match
+            $("#matchName").text(data.name);
+            $("#matchPic").attr("src", data.photo);
+
+            // Display the match
+            $(document).ready(function () {
+                $(".modal").modal();
+            })
+        });
+    });
+</script>
 
 
 </body>
