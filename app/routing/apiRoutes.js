@@ -3,6 +3,7 @@ var friends = require("../data/friends.js");
 
 // ROUTING
 module.exports = function(app) {
+  
   // API GET Requests
   // This will be used to display a JSON of all possible friends.
    app.get("/api/friends", function(req, res) {
@@ -41,7 +42,5 @@ module.exports = function(app) {
 
        //Add new person to the list    
        friends.push(req.body);     
-});
-
 });
 };
