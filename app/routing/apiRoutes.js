@@ -25,13 +25,16 @@ module.exports = function(app) {
     
     // Loop through friends list
     for (var i= 0; i < friends.length; i++) {
+         // Loop through the scores for each friend
             for(var k = 0; k < scores.length; k++){
 
-            // Loop through the scores 
+           //Compare scores between new user and current friendsArray
             scoreTotal += (Math.abs(parseInt(friends[i].scores[k])) - parseInt(scores[k]));
+            console.log(scoreTotal);
         }
 
-        // Find the closest score
+        // If a total is lower than the current matchTotal (the closest score), make it the new scoreTotal
+        //Set this index as the matchIndex
         if (matchTotal >= scoreTotal) {
             matchTotal = scoreTotal;
             matchIndex = i;

@@ -2,7 +2,7 @@ var friendArray = [
 
   {
       "name":"Zoe",
-      "photo":"/images/Zoe.jpeg",
+      "photo":"https://images.pexels.com/photos/794064/pexels-photo-794064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
       "scores":[
           5,
           5,
@@ -18,7 +18,7 @@ var friendArray = [
   },
   {
       "name":"Aida",
-      "photo":"/images/Aida.jpeg",
+      "photo":"https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
       "scores":[
           1,
           1,
@@ -34,33 +34,33 @@ var friendArray = [
   },
   {
       "name":"Colby",
-      "photo":"/images/Colby.jpeg",
+      "photo":"https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
       "scores":[
-          5,
           1,
-          4,
-          3,
-          3,
-          2,
-          2,
           1,
-          4,
-          3
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
   },
   {
       "name":"Nick",
-      "photo":"/images/Nick.jpeg",
+      "photo":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
       "scores":[
-          1,
-          2,
-          3,
-          4,
           5,
-          1,
-          2,
-          3,
-          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
           5
         ]
   }
